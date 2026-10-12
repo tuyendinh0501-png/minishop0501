@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>MiniMart - Hội Viên & Ưu Đãi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/member.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🛒 MiniMart</div>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="product-detail.html?id=sua">Chi tiết</a>
+            <a href="cart.html">Giỏ hàng</a>
+            <a href="member.html">Hội viên & Ưu đãi</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- KHU VỰC DÀNH CHO KHÁCH (CHƯA ĐĂNG NHẬP) -->
+        <div id="khu-khach" class="box-section">
+            <h2>Đăng nhập / Đăng ký hội viên</h2>
+            <p style="margin-bottom: 20px;">Trở thành hội viên MiniMart ngay hôm nay để tích điểm đổi quà và nhận ưu đãi độc quyền hàng tuần!</p>
+            
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Nhập email của bạn (ví dụ: tuyen@gmail.com)">
+            </div>
+            <div class="form-group">
+                <input type="password" id="pass" placeholder="Mật khẩu tài khoản">
+            </div>
+            <button class="btn" style="width: 100%; padding: 12px; font-size: 1rem;" onclick="dangNhap()">Đăng nhập / Đăng ký</button>
+        </div>
+
+        <!-- KHU VỰC DÀNH CHO HỘI VIÊN (HIỂN THỊ KHI ĐĂNG NHẬP THÀNH CÔNG) -->
+        <div id="khu-hoivien" class="box-section" style="display: none;">
+            <h2>Xin chào, Tuyên</h2>
+            <p style="margin: 10px 0;">Hạng hội viên: <span class="badge">GOLD</span></p>
+            <p style="margin-bottom: 15px;">Điểm tích lũy hiện tại: <strong style="color: #d9534f; font-size: 1.2rem;">1.250 điểm</strong></p>
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+            <h3>🎁 Ưu đãi dành riêng cho bạn</h3>
+            <ul>
+                <li>Voucher giảm 20.000đ cho đơn hàng từ 100.000đ</li>
+                <li>Miễn phí giao hàng cho các đơn trong bán kính 3km</li>
+                <li>Quà tặng sinh nhật đặc biệt vào tháng sinh</li>
+            </ul>
+
+            <button class="btn" style="background: #d9534f; margin-top: 20px; padding: 10px 20px;" onclick="dangXuat()">Đăng xuất tài khoản</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MiniMart.Thiết kế Web.</p>
+    </footer>
+
+    <script src="js/member.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log("Trang chủ MiniMart đã tải thành công.");

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>MiniMart - Danh Sách Sản Phẩm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🛒 MiniMart</div>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="product-detail.html?id=sua">Chi tiết</a>
+            <a href="cart.html">Giỏ hàng</a>
+            <a href="member.html">Hội viên & Ưu đãi</a>
+        </nav>
+    </header>
+
+    <div class="container layout">
+        <aside class="sidebar">
+            <h3>Danh mục sản phẩm</h3>
+            <button onclick="loc('tatca')">📦 Tất cả sản phẩm</button>
+            <button onclick="loc('raucu')">🥬 Rau củ quả</button>
+            <button onclick="loc('thitca')">🥩 Thịt cá tươi</button>
+            <button onclick="loc('dokho')">📦 Đồ khô & Gạo</button>
+            <button onclick="loc('douong')">🧃 Đồ uống giải khát</button>
+            <button onclick="loc('khac')">🧴 Hàng tiêu dùng khác</button>
+        </aside>
+
+        <div class="main-content">
+            <input type="text" id="timkiem" class="search-box" placeholder="Tìm kiếm sản phẩm theo tên..." onkeyup="timKiemTen()">
+            
+            <div class="product-grid" id="grid">
+                <!-- Sản phẩm 1: Sữa -->
+                <div class="the" data-category="douong">
+                    <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=300" alt="Sữa tươi">
+                    <h4>Sữa tươi Vinamilk 1L</h4>
+                    <p class="price">35.000 đ</p>
+                    <a href="product-detail.html?id=sua" class="btn" style="background: #555; margin-bottom: 5px; display: block;">Xem chi tiết</a>
+                    <button class="btn" onclick="themNhanh('sua', 'Sữa tươi Vinamilk 1L', 35000, '35.000 đ', 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=300')">Thêm vào giỏ</button>
+                </div>
+                <!-- Sản phẩm 2: Gạo -->
+                <div class="the" data-category="dokho">
+                    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300" alt="Gạo ST25">
+                    <h4>Gạo ST25 (5kg)</h4>
+                    <p class="price">180.000 đ</p>
+                    <a href="product-detail.html?id=gao" class="btn" style="background: #555; margin-bottom: 5px; display: block;">Xem chi tiết</a>
+                    <button class="btn" onclick="themNhanh('gao', 'Gạo ST25 (5kg)', 180000, '180.000 đ', 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300')">Thêm vào giỏ</button>
+                </div>
+                <!-- Sản phẩm 3: Coca Cola -->
+                <div class="the" data-category="douong">
+                    <img src="https://images.unsplash.com/photo-1543253687-c931c8e01820?w=300" alt="Coca Cola">
+                    <h4>Nước ngọt Coca Cola</h4>
+                    <p class="price">10.000 đ</p>
+                    <a href="product-detail.html?id=coca" class="btn" style="background: #555; margin-bottom: 5px; display: block;">Xem chi tiết</a>
+                    <button class="btn" onclick="themNhanh('coca', 'Nước ngọt Coca Cola', 10000, '10.000 đ', 'https://images.unsplash.com/photo-1543253687-c931c8e01820?w=300')">Thêm vào giỏ</button>
+                </div>
+                <!-- Sản phẩm 4: Dầu ăn -->
+                <div class="the" data-category="dokho">
+                    <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=300" alt="Dầu ăn">
+                    <h4>Dầu ăn Tường An 1L</h4>
+                    <p class="price">48.000 đ</p>
+                    <a href="product-detail.html?id=dau" class="btn" style="background: #555; margin-bottom: 5px; display: block;">Xem chi tiết</a>
+                    <button class="btn" onclick="themNhanh('dau', 'Dầu ăn Tường An 1L', 48000, '48.000 đ', 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=300')">Thêm vào giỏ</button>
+                </div>
+      <!-- Sản phẩm 5: Trứng gà -->
+<div class="the" data-category="thitca">
+    <img src="https://bactom.com/wp-content/uploads/2023/06/7d7b3a273cfeac42d073f152c057e78b.jpg" alt="Trứng gà">
+    <h4>Trứng gà ta (Hộp 10 quả)</h4>
+    <p class="price">32.000 đ</p>
+    <a href="product-detail.html?id=trung" class="btn" style="background: #555; margin-bottom: 5px; display: block;">Xem chi tiết</a>
+    <button class="btn" onclick="themNhanh('trung', 'Trứng gà ta (Hộp 10 quả)', 32000, '32.000 đ', 'https://bactom.com/wp-content/uploads/2023/06/7d7b3a273cfeac42d073f152c057e78b.jpg')">Thêm vào giỏ</button>
+</div>
+                <!-- Sản phẩm 6: Nước rửa chén -->
+                <div class="the" data-category="khac">
+                    <img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=300" alt="Nước rửa chén">
+                    <h4>Nước rửa chén Sunlight</h4>
+                    <p class="price">32.000 đ</p>
+                    <a href="product-detail.html?id=sunlight" class="btn" style="background: #555; margin-bottom: 5px; display: block;">Xem chi tiết</a>
+                    <button class="btn" onclick="themNhanh('sunlight', 'Nước rửa chén Sunlight', 32000, '32.000 đ', 'https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=300')">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MiniMart. Đồ án Thiết kế Web.</p>
+    </footer>
+
+    <script src="js/products.js"></script>
+</body>
+</html>
